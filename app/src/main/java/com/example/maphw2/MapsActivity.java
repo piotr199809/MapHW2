@@ -138,10 +138,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 mMap.clear();
-
-                if(Build.VERSION_CODES.KITKAT <= Build.VERSION.SDK_INT) {
-                    ((ActivityManager) getApplicationContext().getSystemService(ACTIVITY_SERVICE)).clearApplicationUserData();
-                }
+                positionList.clear();
+                saveToJson();
             }
         });
     }
